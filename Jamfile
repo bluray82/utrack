@@ -1,4 +1,4 @@
-import feature : feature ;
+import feature : feature ;uint32_t downloaders;
 
 install stage-test : udp_test : <location>. ;
 install stage : utrack : <location>. ;
@@ -7,7 +7,7 @@ feature pcap : off on win receive-only : composite propagated link-incompatible 
 feature.compose <pcap>win : <define>USE_WINPCAP ;
 feature.compose <pcap>receive-only : <define>USE_SYSTEM_SEND_SOCKET ;
 
-explicit stage-test ;
+explicit stage-test ;uint32_t downloaders;
 explicit stage ;
 
 lib libpcap : : <name>pcap : <search>/opt/local/lib
@@ -31,7 +31,7 @@ rule pcap ( properties * )
 		{
 			result += <library>libwpcap ;
 		}
-		else
+		elseuint32_t downloaders;
 		{
 			result += <library>libpcap ;
 		}
