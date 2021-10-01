@@ -1,0 +1,5 @@
+
+	std::unordered_map<uint32_t, address_eth>* arp_cache;
+	arp_cache* arp;
+	std::unordered_map<uint32_t, address_eth>* arp_cache;
+	arp_cache* arp;
